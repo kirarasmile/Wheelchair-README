@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>你能帮帮我吗</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <style>
+      div{
+        text-align: center;
+      }
+      body {
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="./img/icon.png">
+      <h1>♿️动感轮椅自助式readME♿️</h1>
+      <h3>👏专注于解决你的所有诡异问题👏</h3>
+      <h1>👌🤔选择你的问题🤔👌</h1>
+      <hr class="layui-bg-black">
+    </div>
+    <div>
+      <a href="http://www.baidu.com" class="layui-btn">🧠我打不开</a>
+      <a href="http://www.baidu.com" class="layui-btn">🧠我登不上</a>
+      <a href="http://www.baidu.com" class="layui-btn">🧠我装不了</a>
+      <a href="http://www.baidu.com" class="layui-btn">🧠它弹红色字</a>
+      <a href="http://www.baidu.com" class="layui-btn">🧠它弹error了</a>
+      <a href="http://www.baidu.com" class="layui-btn">🧠它黑屏了</a>
+      <br><br>
+      <a href="http://www.baidu.com" class="layui-btn">🧠它闪退了</a>
+      <a href="http://www.baidu.com" class="layui-btn">🧠它不见了</a>
+      <a href="http://www.baidu.com" class="layui-btn">🧠它得输出结果没了</a>
+      <a href="http://www.baidu.com" class="layui-btn">🧠我print不出来</a>
+      <a href="http://www.baidu.com" class="layui-btn">🧠我环境不见了</a>
+    </div>
+    <div id=wtf>
+      <hr class="layui-bg-black">
+      <h1>or</h1>
+      <h1>输入你的问题</h1>
+      <input value="" type="text" v-on:keyup="getValue" v-model="qs">
+      <a v-bind:href="baidu+qs" class="layui-btn">帮帮我</a>
+      <hr class="layui-bg-black">
+    </div>
+    <div>
+      <br><br><br>
+      <img src="img/img1.png">
+    </div>
+  </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  var vm = new Vue({
+    el: '#wtf',
+    data: {
+      qs: '',
+      baidu: 'https://www.baidu.com/s?wd=',
+    },
+    methods:{
+      getValue:function(e) {
+        qs=this.e
+      }
+    }
+  })
+</script>
